@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Local Community Event Portal</title>
+
+  <!-- Exercise 5: Google Fonts via <link> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Exercise 1: External stylesheet (all reusable styles live here) -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Exercise 1: Embedded <style> for body background (internal CSS) -->
+  <style>
+    /* Internal CSS — Exercise 1 */
+    /* Body background defined here as an example of embedded styling */
+    body {
+      background-color: #f0f4f8; /* fallback, overridden by styles.css */
+    }
+
+    /* Exercise 8: visibility vs display demo boxes */
+    .demo-box {
+      display: inline-block;
+      width: 120px;
+      height: 50px;
+      background: #1a73e8;
+      color: white;
+      text-align: center;
+      line-height: 50px;
+      border-radius: 4px;
+      margin: 6px;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ─── NAVIGATION (Exercise 6: list & link styling) ──────── -->
+  <nav>
+    <ul>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#bulletin">Bulletin</a></li>
+      <li><a href="#admin">Admin</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ─── BANNER / MAIN HEADER (Exercise 3: ID selector) ──── -->
+  <header id="mainHeader">
+    <!--
+      Exercise 1: Inline style — makes this heading red.
+      Inline styles have the highest specificity.
+    -->
+    <h1 style="color: #ff6b6b;">Local Community Event Portal</h1>
+    <p class="overlay-text">Your one-stop hub for local events, news &amp; updates</p>
+  </header>
+
+  <main style="padding: 20px; max-width: 1100px; margin: 0 auto;">
+
+    <!-- ─── SECTION: Events (Exercise 3, 4, 8) ────────────── -->
+    <section id="events">
+      <div class="section-header">
+        <h2>Upcoming Events</h2>
+      </div>
+
+      <div class="events-container">
+
+        <!-- Exercise 3: Class selector .eventCard | Exercise 8: box model -->
+        <div class="eventCard">
+          <h3>Community Clean-Up Drive</h3>
+          <p class="event-description">
+            Join us this Saturday for a city-wide clean-up initiative. Volunteers
+            of all ages are welcome. Refreshments will be provided by the council.
+          </p>
+          <p><strong>Date:</strong> June 14, 2026 &nbsp;|&nbsp; <strong>Venue:</strong> Central Park</p>
+          <a href="#" class="cta-button">Register Now</a>
+        </div>
+
+        <div class="eventCard">
+          <h3>Annual Cultural Fest</h3>
+          <p class="event-description">
+            Celebrate the diversity of our community through music, dance, food stalls,
+            and art exhibitions. Free entry for all residents.
+          </p>
+          <p><strong>Date:</strong> July 4, 2026 &nbsp;|&nbsp; <strong>Venue:</strong> Town Hall</p>
+          <a href="#" class="cta-button">Register Now</a>
+        </div>
+
+        <div class="eventCard">
+          <h3>Health &amp; Wellness Camp</h3>
+          <p class="event-description">
+            Free health check-ups, yoga sessions, and diet consultations offered by
+            certified professionals.
+          </p>
+          <p><strong>Date:</strong> July 20, 2026 &nbsp;|&nbsp; <strong>Venue:</strong> Community Hall</p>
+          <a href="#" class="cta-button">Register Now</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─── SECTION: Links demo (Exercise 6) ─────────────── -->
+    <section style="margin: 30px 0;">
+      <div class="section-header"><h2>Quick Links</h2></div>
+      <div class="eventCard">
+        <p>Try hovering and clicking the links below to see pseudo-class states:</p>
+        <ul class="event-list">
+          <li><a href="#">City Council Website</a></li>
+          <li><a href="#">Event Registration Portal</a></li>
+          <li><a href="#">Volunteer Sign-Up</a></li>
+          <li><a href="#">Download Event Brochure</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ─── SECTION: Admin Table (Exercise 7) ─────────────── -->
+    <section id="admin" style="margin: 30px 0;">
+      <div class="section-header"><h2>Events Admin Table</h2></div>
+      <div class="eventCard" style="padding: 0; overflow-x: auto;">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Event Name</th>
+              <th>Date</th>
+              <th>Venue</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Community Clean-Up</td>
+              <td>June 14, 2026</td>
+              <td>Central Park</td>
+              <td>Open</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Cultural Fest</td>
+              <td>July 4, 2026</td>
+              <td>Town Hall</td>
+              <td>Open</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Health &amp; Wellness Camp</td>
+              <td>July 20, 2026</td>
+              <td>Community Hall</td>
+              <td>Upcoming</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Book Fair</td>
+              <td>Aug 5, 2026</td>
+              <td>City Library</td>
+              <td>Planning</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Marathon 2026</td>
+              <td>Aug 15, 2026</td>
+              <td>Main Road</td>
+              <td>Planning</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ─── SECTION: Box Model demo (Exercise 8) ──────────── -->
+    <section style="margin: 30px 0;">
+      <div class="section-header"><h2>Box Model &amp; Visibility Demo</h2></div>
+      <div class="eventCard">
+        <p><strong>visibility: hidden</strong> — the box below is hidden but still occupies space:</p>
+        <div>
+          <div class="demo-box">Visible</div>
+          <!-- Exercise 8: visibility hidden — space is preserved -->
+          <div class="demo-box hidden-visibility">Hidden (space kept)</div>
+          <div class="demo-box">Visible</div>
+        </div>
+        <br/>
+        <p><strong>display: none</strong> — the box below is completely removed from layout:</p>
+        <div>
+          <div class="demo-box">Visible</div>
+          <!-- Exercise 8: display none — no space at all -->
+          <div class="demo-box hidden-display">Gone (no space)</div>
+          <div class="demo-box">Visible</div>
+        </div>
+        <br/>
+        <p><strong>Form field with outline on focus:</strong></p>
+        <input type="text" placeholder="Click to see outline..." style="padding:8px; width:260px; border:1px solid #ccc; border-radius:4px;" />
+      </div>
+    </section>
+
+    <!-- ─── SECTION: Multi-Column Bulletin (Exercise 9) ───── -->
+    <section id="bulletin" style="margin: 30px 0;">
+      <div class="section-header"><h2>Community Bulletin</h2></div>
+      <div class="eventCard">
+        <!-- Exercise 9: column-count, column-gap, column-rule -->
+        <article class="news-article">
+          <h3>Monthly Newsletter — June 2026</h3>
+          <p>
+            The city council has announced a new green initiative that aims to plant
+            over 5,000 trees across all wards by the end of the year. Residents are
+            encouraged to participate in the planting drives scheduled every weekend.
+          </p>
+          <p>
+            Road repairs on Main Street will begin July 1st and are expected to last
+            three weeks. Commuters are advised to use alternate routes via South
+            Boulevard during this period.
+          </p>
+          <p>
+            The public library will now remain open until 9 PM on weekdays, following
+            a request from residents for extended hours. New digital kiosks have also
+            been installed for faster catalog browsing.
+          </p>
+          <p>
+            Local schools will participate in the annual Science Olympiad on August 10.
+            Registration for student teams is open at the Education Department office
+            or online at the city portal.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ─── SECTION: Contact (Exercise 10 responsive form) ── -->
+    <section id="contact" style="margin: 30px 0 50px;">
+      <div class="section-header"><h2>Contact Us</h2></div>
+      <div class="eventCard">
+        <p class="event-description">Have a query or want to list your event? Reach out below.</p>
+        <form>
+          <div style="margin-bottom:12px;">
+            <label for="name" style="display:block; margin-bottom:4px; font-weight:600;">Name</label>
+            <input type="text" id="name" placeholder="Your full name"
+              style="width:100%; padding:10px; border:1px solid #ccc; border-radius:4px;" />
+          </div>
+          <div style="margin-bottom:12px;">
+            <label for="email" style="display:block; margin-bottom:4px; font-weight:600;">Email</label>
+            <input type="email" id="email" placeholder="you@example.com"
+              style="width:100%; padding:10px; border:1px solid #ccc; border-radius:4px;" />
+          </div>
+          <div style="margin-bottom:12px;">
+            <label for="message" style="display:block; margin-bottom:4px; font-weight:600;">Message</label>
+            <textarea id="message" rows="4" placeholder="Your message..."
+              style="width:100%; padding:10px; border:1px solid #ccc; border-radius:4px; resize:vertical;"></textarea>
+          </div>
+          <button type="submit" class="cta-button">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─── FOOTER ──────────────────────────────────────────── -->
+  <footer style="background-color: #1a73e8; color: white; text-align: center; padding: 20px;">
+    <p style="font-size: 0.9rem;">&copy; 2026 Local Community Event Portal. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
